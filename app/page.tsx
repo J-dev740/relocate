@@ -20,7 +20,7 @@ export default function Home() {
       className='bg-gradient-to-b  from-[#00BEAC] via-[#00BEAC] to-transparent text-white'
       title={['top','destinations']} text='Your peace of mind doesn’t have to be tied to where everyone else is. 
       We have a good number of travel and relocation destinations. Take your time and find the perfect one for you. '>
-       <div className='flex  flex-row items-center justify-center  w-full h-fit  self-center justify-self-center gap-[20px] '>
+       <div className='flex group  flex-row items-center justify-center  w-full h-fit  self-center justify-self-center gap-[20px] '>
         {/* render cards  */}
           <DestinationCard key={1} img='/c1.jpeg' loc='Paraty' name='Rio De Janerio'/>
           <DestinationCard key={2} img='/c2.jpeg' loc='Morretes' name='Parana'/>

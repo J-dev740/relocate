@@ -1,5 +1,6 @@
 'use client';
 import React from 'react'
+import {motion} from 'framer-motion'
 
 interface DestinationCardProps{
     img:string;
@@ -9,9 +10,14 @@ interface DestinationCardProps{
 }
 export const DestinationCard = ({img,loc,name}:DestinationCardProps) => {
   return (
-    <div 
+    <motion.div 
+    // initial={{scale:0.5,opacity:1}}
+    // // whileInView={{y:0,opacity:1}}
+    // whileHover={{scale:0.1,opacity:[0,1]}}
+    // // viewport={{once:true,amount:0.3}}
+    // transition={{duration:1.8,type:'spring'}}
     style={{backgroundImage:`url('${img}')`}}
-    className='flex relative w-full min-[1200px]:h-[553px] h-[300px]  bg-cover bg-center transition-all duration-200 ease-in-out  text-white bg-no-repeat max-w-[310px]  rounded-[10px]  flex-col items-center justify-end'>
+    className='flex relative w-full min-[1200px]:h-[553px] hover:scale-110 t h-[300px]  bg-cover bg-center transition-all duration-300 ease-in-out  text-white bg-no-repeat max-w-[310px]  rounded-[10px]  flex-col items-center justify-end'>
         {/*  overlay*/}
         <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-[10px]'></div>
         {/* location & name */}
@@ -19,6 +25,6 @@ export const DestinationCard = ({img,loc,name}:DestinationCardProps) => {
             <p>{loc}</p>
             <p className='text-[14px] font-medium tracking-wider font-circular  '>{name}</p>
         </div>
-    </div>
+    </motion.div>
   )
 }
