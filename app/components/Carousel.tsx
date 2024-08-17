@@ -10,7 +10,7 @@ const Carousel:React.FC = () => {
       // arrows:true,
       infinite: true,
       speed: 1500,
-      slidesToShow: 2,
+      slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
       autoplay: true,
@@ -19,11 +19,11 @@ const Carousel:React.FC = () => {
 
   return (
     <Slider {...settings}
-    className='flex flex-row  relative  w-screen h-[900pxpx]   bg-slate ring-2'>
+    className='flex flex-row  relative  w-screen h-[900pxpx]'>
         <div
         key={1}
-        style={{backgroundImage:'url(`./bg1.png)'}}
-        className='flex w-full h-[813px] '
+        // style={{backgroundImage:'url(`./bg1.png)'}}
+        className='flex w-full hover:cursor-grab h-[400px] bg-[url(/bg1.png)] '
         >
             {/* text  */}
             <div>
@@ -34,7 +34,7 @@ const Carousel:React.FC = () => {
         <div
         key={2}
         // style={{backgroundImage:'url(`bg1.png)'}}
-        className='flex w-full h-[813px] bg-[url(/bg1.png)]  '
+        className='flex w-full hover:cursor-grab h-[400px] bg-[url(/bg1.png)]  '
         >
             {/* text  */}
             <div>
@@ -45,7 +45,7 @@ const Carousel:React.FC = () => {
         <div
         key={3}
         // style={{backgroundImage:'url(`./bg1.png`)'}}
-        className='flex w-full h-[400px] bg-cover bg-center bg-[url(/bg1.png)] '
+        className='flex w-full hover:cursor-grab h-[400px] bg-cover bg-center bg-[url(/bg1.png)] '
         >
             {/* text  */}
             <div>

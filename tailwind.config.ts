@@ -15,7 +15,7 @@ const config: Config = {
       },
       fontFamily:{
         allison:['Allison','cursive'],
-        
+        circular: ['CircularStd', 'sans-serif'],
       }
     },
   },
