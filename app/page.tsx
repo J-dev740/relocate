@@ -22,10 +22,10 @@ export default function Home() {
       We have a good number of travel and relocation destinations. Take your time and find the perfect one for you. '>
        <div className='flex group  flex-row items-center justify-center  w-full h-fit  self-center justify-self-center min-[700px]:gap-[20px] gap-2 '>
         {/* render cards  */}
-          <DestinationCard key={1} img='/c1.jpeg' loc='Paraty' name='Rio De Janerio'/>
-          <DestinationCard key={2} img='/c2.jpeg' loc='Morretes' name='Parana'/>
-          <DestinationCard key={3} img='/c3.jpeg' loc='Olinda' name='Pernambuco'/>
-          <DestinationCard key={4} img='/c4.png' loc='Gramado' name='Rio Grande Do Sul'/>
+          <DestinationCard idx={0.5} key={1} img='/c1.jpeg' loc='Paraty' name='Rio De Janerio'/>
+          <DestinationCard idx={0.7} key={2} img='/c2.jpeg' loc='Morretes' name='Parana'/>
+          <DestinationCard idx={0.9} key={3} img='/c3.jpeg' loc='Olinda' name='Pernambuco'/>
+          <DestinationCard idx={1.1} key={4} img='/c4.png' loc='Gramado' name='Rio Grande Do Sul'/>
 
 
        </div>
@@ -45,7 +45,7 @@ export default function Home() {
             whileInView={{y:0,opacity:1}}
             viewport={{once:true,amount:0.5}}
             whileHover={{scale:1.02}}
-            transition={{duration:1,type:'spring'}}
+            transition={{duration:1,type:'spring',stiffness:100}}
             style={{ backgroundImage: `url('./m1.png')` }}
             className=' grid relative hover:cursor-pointer  transition-all duration-200  cols-span-1 bg-slate-300 h-full rounded-lg bg-cover bg-center bg-no-repeat items-end '>
 {/*  1*/}
@@ -68,7 +68,7 @@ export default function Home() {
                           initial={{y:-100,opacity:0}}
                           whileInView={{y:0,opacity:1}}
                           viewport={{once:true,amount:0.3}}
-                          transition={{duration:1.4,type:'spring'}}
+                          transition={{duration:1.4,type:'spring',stiffness:100}}
               style={{backgroundImage:`url('./m2.png')`}}
               className='flex  relative w-full h-full bg-slate-400 rounded-lg bg-cover bg-center bg-no-repeat items-end justify-center min-[700px]:pb-[70px] pb-[50px] ' >
 {/* 2 */}
@@ -85,7 +85,7 @@ export default function Home() {
                 initial={{y:100,opacity:0}}
                 whileInView={{y:0,opacity:1}}
                 viewport={{once:true,amount:0.3}}
-                transition={{duration:1.8,type:'spring'}}
+                transition={{duration:1.8,type:'spring',stiffness:100}}
               style={{backgroundImage:`url('./m3.png')`}}
 
               className='flex relative  w-full h-full bg-slate-700 rounded-lg bg-cover bg-center bg-no-repeat items-end' >
@@ -106,7 +106,7 @@ export default function Home() {
                 initial={{x:100,opacity:0}}
                 whileInView={{x:0,opacity:1}}
                 viewport={{once:true,amount:0.3}}
-                transition={{duration:2,type:'spring'}}
+                transition={{duration:2,type:'spring',stiffness:100}}
               style={{backgroundImage:`url('./m4.png')`}}
 
             className='flex relative w-full h-full bg-slate-500 rounded-lg bg-cover bg-center bg-no-repeat items-end ' >

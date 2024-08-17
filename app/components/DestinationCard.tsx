@@ -6,18 +6,20 @@ interface DestinationCardProps{
     img:string;
     loc:string;
     name:string;
+    idx:number;
 
 }
-export const DestinationCard = ({img,loc,name}:DestinationCardProps) => {
+export const DestinationCard = ({img,loc,name,idx}:DestinationCardProps) => {
   return (
+    <div className='flex hover:scale-110 w-full h-full transition-all duration-300 ease-in-out'>
     <motion.div 
-    // initial={{scale:1,opacity:1}}
-    // // // whileInView={{y:0,opacity:1}}
+    initial={{x:-100,scale:0.7,opacity:0}}
+    whileInView={{x:0,scale:1,opacity:1}}
     // whileHover={{scale:1.1,opacity:1}}
-    // // // viewport={{once:true,amount:0.3}}
-    // transition={{duration:0.1,type:'spring'}}
+    viewport={{once:true,amount:0.5}}
+    transition={{duration:0.1+idx,type:'spring'}}
     style={{backgroundImage:`url('${img}')`}}
-    className='flex relative w-full min-[1200px]:h-[553px] hover:scale-110 min-[700px]:h-[300px] h-[200px] bg-cover bg-center transition-all duration-300 ease-in-out  text-white bg-no-repeat max-w-[310px]  rounded-[10px]  flex-col items-center justify-end'>
+    className='flex relative w-full min-[1200px]:h-[553px] min-[700px]:h-[300px] h-[200px] bg-cover bg-center transition-all duration-300 ease-in-out  text-white bg-no-repeat max-w-[310px]  rounded-[10px]  flex-col items-center justify-end'>
         {/*  overlay*/}
         <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-[10px]'></div>
         {/* location & name */}
@@ -28,5 +30,7 @@ export const DestinationCard = ({img,loc,name}:DestinationCardProps) => {
             <p className='min-[700px]:text-[14px] text-[7px] font-medium tracking-wider font-circular  uppercase  '>{name}</p>
         </div>
     </motion.div>
+
+    </div>
   )
 }
