@@ -12,7 +12,8 @@ export default function Home() {
       {/* <Carousel/> */}
       {/* top destinations */}
       <Section 
-      className='bg-gradient-to-b  from-[#00BEAC] via-[#00BEAC] to-transparent'
+      topcolor='text-[#FFD600]'
+      className='bg-gradient-to-b  from-[#00BEAC] via-[#00BEAC] to-transparent text-white'
       title={['top','destinations']} text='Your peace of mind doesn’t have to be tied to where everyone else is. 
       We have a good number of travel and relocation destinations. Take your time and find the perfect one for you. '>
        <div className='flex  flex-row items-center justify-center  w-full h-fit  self-center justify-self-center gap-[20px] '>
@@ -27,10 +28,11 @@ export default function Home() {
       </Section>
       {/* more destinations */}
       <Section 
-      className='bg-white  text-white'
+      topcolor='text-[#0CA296]'
+      className=' bg-white text-black'
       title={['more','destinations']} text='Your peace of mind doesn’t have to be tied to where everyone else is. 
       We have a good number of travel and relocation destinations. Take your time and find the perfect one for you. '>
-        <div className=' grid  grid-cols-3 gap-[20px] h-fit min-h-[700px] w-full '>
+        <div className=' grid  grid-cols-3 gap-[20px] h-fit min-h-[700px] w-full text-white '>
 
 
 

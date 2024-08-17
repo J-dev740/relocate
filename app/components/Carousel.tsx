@@ -19,7 +19,7 @@ const Carousel:React.FC = () => {
 
   return (
     <Slider {...settings}
-    className='flex flex-row  relative  w-screen h-[900pxpx]'>
+    className='flex flex-row  relative -mb-60  w-screen h-[600px]'>
         <div
         key={1}
         // style={{backgroundImage:'url(`./bg1.png)'}}
@@ -34,7 +34,7 @@ const Carousel:React.FC = () => {
         <div
         key={2}
         // style={{backgroundImage:'url(`bg1.png)'}}
-        className='flex w-full hover:cursor-grab h-[400px] bg-[url(/bg1.png)]  '
+        className='flex w-full hover:cursor-grab h-[400px] bg-[url(/bg2.png)]  '
         >
             {/* text  */}
             <div>
@@ -45,7 +45,7 @@ const Carousel:React.FC = () => {
         <div
         key={3}
         // style={{backgroundImage:'url(`./bg1.png`)'}}
-        className='flex w-full hover:cursor-grab h-[400px] bg-cover bg-center bg-[url(/bg1.png)] '
+        className='flex w-full hover:cursor-grab h-[400px] bg-cover bg-center bg-[url(/bg3.png)] '
         >
             {/* text  */}
             <div>
