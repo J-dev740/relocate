@@ -1,4 +1,5 @@
 import React from 'react'
+import { IoMdMenu } from "react-icons/io";
 
 export const Navbar = () => {
   return (
@@ -9,7 +10,7 @@ export const Navbar = () => {
             <li>Deal</li>
             <li>Explore</li>
             <li>Resources</li>
-            <li>Menu</li>
+            <li><IoMdMenu/></li>
         </ul>
     </div>
   )

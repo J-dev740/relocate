@@ -1,4 +1,6 @@
 import React from 'react'
+import { IoLogoFacebook, IoLogoGithub, IoLogoInstagram, IoLogoTwitter } from 'react-icons/io';
+import { IconType } from 'react-icons/lib';
 
 export const Footer = () => {
   return (
@@ -13,7 +15,7 @@ export const Footer = () => {
                 <Card heading='Legal' list={['MSA Self Managed','Privacy','GDPR','Guidelines for Law Enforcement','Terms of Service','Manage Cookies']}/>
                 <Card heading='Product' list={['MSA Self Managed','Privacy','GDPR','Guidelines for Law Enforcement','Terms of Service','Manage Cookies']}/>
                 <Card heading='Company' list={['MSA Self Managed','Privacy','GDPR','Guidelines for Law Enforcement','Terms of Service','Manage Cookies']}/>
-                {/* <Card heading='Legal' list={['MSA Self Managed','Privacy','GDPR','Guidelines for Law Enforcement','Terms of Service','Manage Cookies']}/> */}
+                <Card heading='Legal' list={[IoLogoGithub,IoLogoFacebook,IoLogoTwitter,IoLogoInstagram]}/>
 
             </div>
     </div>
@@ -22,19 +24,29 @@ export const Footer = () => {
 
 interface cardProps{
     heading:string;
-    list:string[];
+    list:string[] | IconType[];
 }
 
 const Card:React.FC<cardProps>=({heading,list})=>{
+
+    const isString = (item: any): item is string => {
+        return typeof item === 'string';
+      };
     return(
         <div className='flex flex-col items-start justify-start gap-[20px]'>
             {/* heading */}
             <div className='flex  text-[16px] text-white font-circular font-bold '>{heading}</div>
             <ul className='flex flex-col items-start justify-center '>
-            {list.map((item,idx)=>(
-                <li  className='text-white text-[16px] font-normal font-circular gap-1 '
-                key={idx}>{item}</li>
-            ))}
+            {list.map((Item:any,idx)=>{
+                if(isString(Item)) return(
+                    <li  className='text-white text-[16px] font-normal font-circular gap-1 '
+                    key={idx}>{Item}</li>
+                )
+                else return(
+                    <li  className='text-white text-[20px] mb-[18px] font-normal font-circular gap-1 '
+                    key={idx}><Item/></li>
+                )
+})}
 
             </ul>
 
