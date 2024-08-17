@@ -32,13 +32,13 @@ const Carousel:React.FC = () => {
                       >
                           {/* text  */}
                           <div className='absolute inset-0  z-10 bg-gradient-to-tr opacity-45 from-black to-transparent '></div>
-                          <div className='absolute top-1/2 left-5 w-fit flex-col  justify-between  z-20'>
-                              <p className=' max-[700px]:text-[50px] max-[700px]:leading-[50px]
-                               min-[1200px]:text-[250px] min-[800px]:text-[200px] 
-                               leading-[200px] font-allison font-normal text-[#FFC700]'>make the right </p>
+                          <div className='absolute min-[700px]:top-1/4 max-[1200px]:top-1/4 top-1/2 left-5 w-fit flex-col  justify-between  z-20'>
+                              <p className=' max-[700px]:text-[50px] max-[700px]:leading-[50px] text-[80px] leading-[100px]
+                               min-[1200px]:text-[250px] min-[900px]:text-[200px] 
+                               min-[1200px]:leading-[200px] font-allison font-normal text-[#FFC700]'>make the right </p>
                               <p className='text-white min-[1200px]:text-[300px] 
-                              max-[700px]:text-[50px] max-[700px]:leading-[50px]
-                              font-extrabold  font-circular leading-[180px] text-[250px]'>move .</p>
+                              max-[700px]:text-[50px] max-[700px]:leading-[50px] leading-[90px] text-[85px]
+                              font-extrabold  font-circular min-[1200px]:leading-[180px] min-[900px]:text-[250px]'>move .</p>
                           </div>
               
                       </div>

@@ -44,16 +44,17 @@ export default function Home() {
             initial={{y:100,opacity:0}}
             whileInView={{y:0,opacity:1}}
             viewport={{once:true,amount:0.5}}
+            whileHover={{scale:1.02}}
             transition={{duration:1,type:'spring'}}
             style={{ backgroundImage: `url('./m1.png')` }}
-            className=' grid relative hover:cursor-pointer hover:translate-x-2 hover:translate-y-2 transition-all duration-200  cols-span-1 bg-slate-300 h-full rounded-lg bg-cover bg-center bg-no-repeat items-end '>
+            className=' grid relative hover:cursor-pointer  transition-all duration-200  cols-span-1 bg-slate-300 h-full rounded-lg bg-cover bg-center bg-no-repeat items-end '>
 {/*  1*/}
             {/*  overlay*/}
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-[10px]'></div>
             {/* location & name */}
             <div className='flex flex-col items-center z-10 justify-center  min-[700px]:pb-[150px] pb-[100px] font-circular font-bold
             max-[700px]:leading-[30px]
-             leading-[50px] min-[700px]:text-[40px] text-[18px] text-center '>
+             leading-[50px] min-[900px]:text-[40px] text-[18px] text-center '>
               <p>Estaing</p>
               <p className='text-[14px] max-[700px]:text-[10px] font-medium tracking-wider font-circular  '>France</p>
             </div>
@@ -74,7 +75,8 @@ export default function Home() {
         {/*  overlay*/}
         <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-[10px]'></div>
         {/* location & name */}
-        <div className='flex  flex-col items-center z-10 justify-center  font-circular font-bold leading-[30px] min-[700px]:leading-[50px] text-[18px] min-[700px]:text-[40px] text-center '>
+        <div className='flex  flex-col items-center z-10 justify-center  font-circular font-bold leading-[30px] 
+        min-[700px]:leading-[50px] text-[18px] min-[900px]:text-[40px] text-center '>
             <p>Vík í Mýrda</p>
             <p className='text-[14px] max-[700px]:text-[10px] font-medium tracking-wider font-circular  '>Iceland</p>
         </div>
@@ -92,7 +94,7 @@ export default function Home() {
         <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-[10px]'></div>
         {/* location & name */}
         <div className='flex  w-full flex-col items-center z-10 justify-center pb-[50px] min-[700px]:pb-[70px] font-circular font-bold leading-[30px] min-[700px]:leading-[50px] text-[18px]
-         min-[700px]:text-[40px] text-center '>
+         min-[900px]:text-[40px] text-center '>
             <p>Hamnoy village</p>
             <p className='text-[14px] max-[700px]:text-[10px] font-medium tracking-wider font-circular  '>Norway.</p>
         </div>
@@ -112,7 +114,8 @@ export default function Home() {
         {/*  overlay*/}
         <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-[10px]'></div>
         {/* location & name */}
-        <div className='flex flex-col w-full  items-center z-10 justify-center pb-[30px] min-[700px]:pb-[70px] font-circular font-bold leading-[30px] min-[700px]:leading-[50px] min-[700px]:text-[40px] text-[18px] text-center '>
+        <div className='flex flex-col w-full  items-center z-10 justify-center pb-[30px]
+         min-[700px]:pb-[70px] font-circular font-bold leading-[30px] min-[700px]:leading-[50px] min-[900px]:text-[40px] text-[18px] text-center '>
             <p>Montego Bay</p>
             <p className='min-[700px]:text-[14px] max-[700px]:text-[10px] font-medium tracking-wider font-circular  '>JAMAICA</p>
         </div>

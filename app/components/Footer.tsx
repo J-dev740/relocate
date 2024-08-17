@@ -35,11 +35,11 @@ const Card:React.FC<cardProps>=({heading,list})=>{
     return(
         <div className='flex flex-col items-start justify-start gap-[20px]'>
             {/* heading */}
-            <div className='flex max-[700px]:text-[10px]  text-[16px]  text-white font-circular font-bold '>{heading}</div>
+            <div className='flex max-[700px]:text-[10px]  min-[1100px]:text-[16px] text-[14px]  text-white font-circular font-bold '>{heading}</div>
             <ul className='flex flex-col items-start justify-center '>
             {list.map((Item:any,idx)=>{
                 if(isString(Item)) return(
-                    <li  className='text-white hover:cursor-pointer hover:underline hover:underline-offset-2 max-[400px]:text-[8px] max-[700px]:text-[10px]  text-[16px] font-normal font-circular gap-1 '
+                    <li  className='text-white hover:cursor-pointer hover:underline hover:underline-offset-2 max-[400px]:text-[8px] max-[700px]:text-[10px] min-[1100px]:text-[16px]  text-[14px] font-normal font-circular gap-1 '
                     key={idx}>{Item}</li>
                 )
                 else return(
