@@ -13,8 +13,8 @@ export const DestinationCard = ({img,loc,name,idx}:DestinationCardProps) => {
   return (
     <div className='flex hover:scale-110 w-full h-full transition-all duration-300 ease-in-out'>
     <motion.div 
-    initial={{x:-100,scale:0.7,opacity:0}}
-    whileInView={{x:0,scale:1,opacity:1}}
+    initial={{ y:-100,scale:0.7,opacity:0}}
+    whileInView={{ y:0,scale:1,opacity:1}}
     // whileHover={{scale:1.1,opacity:1}}
     viewport={{once:true,amount:0.5}}
     transition={{duration:0.1+idx,type:'spring'}}
