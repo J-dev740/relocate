@@ -2,10 +2,11 @@ import Carousel from './components/Carousel'
 import Image from "next/image";
 import { Section } from './components/Section';
 import { DestinationCard } from './components/DestinationCard';
+import { Footer } from './components/Footer';
 
 export default function Home() {
   return (
-    <main className=" flex flex-col items-start justify-start gap-y-10 w-screen h-screen bg-white mb-[100px] ">
+    <main className=" flex flex-col items-start justify-start gap-y-10 w-screen h-fit bg-white  ">
       {/* nav bar part  */}
       {/* carousel part  */}
       {/* <Carousel/> */}
@@ -95,6 +96,7 @@ export default function Home() {
         </div>
       </Section>
       {/* footer  */}
+      <Footer/>
     </main>
   );
 }
