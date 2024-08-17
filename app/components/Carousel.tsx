@@ -19,7 +19,7 @@ const Carousel:React.FC = () => {
     let bg='bg2'
   return (
     <Slider {...settings}
-    className='flex flex-row  max-[400px]:h-[400px] z-50 relative min-[1200px]:-mb-10 -mb-60 max-[400px]:-mb-10
+    className='flex flex-row  max-[400px]:h-[400px] z-20 relative min-[1200px]:-mb-10 -mb-60 max-[400px]:-mb-10
     w-screen max-[1200px]:h-[600px] min-[1200px]:h-fit'>
 
       {images.map((item:string,idx:number)=>(
