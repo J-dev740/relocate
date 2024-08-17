@@ -1,15 +1,17 @@
+'use client';
 import Carousel from './components/Carousel'
 import Image from "next/image";
 import { Section } from './components/Section';
 import { DestinationCard } from './components/DestinationCard';
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
+import {motion} from 'framer-motion'
 
 export default function Home() {
   return (
     <main className=" flex flex-col items-start justify-start gap-y-10 w-screen h-fit bg-white  ">
       {/* nav bar part  */}
-      {/* <Navbar/> */}
+      <Navbar/>
       {/* carousel part  */}
       <Carousel/>
       {/* top destinations */}
@@ -38,10 +40,14 @@ export default function Home() {
 
 
 
-          <div
+          <motion.div
+            initial={{x:-100,opacity:0}}
+            whileInView={{x:0,opacity:1}}
+            viewport={{once:true,amount:0.3}}
+            transition={{duration:1,type:'spring'}}
             style={{ backgroundImage: `url('./m1.png')` }}
             className=' grid relative  cols-span-1 bg-slate-300 h-full rounded-lg bg-cover bg-center bg-no-repeat items-end '>
-            {/*  1*/}
+{/*  1*/}
             {/*  overlay*/}
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-[10px]'></div>
             {/* location & name */}
@@ -49,13 +55,17 @@ export default function Home() {
               <p>Estaing</p>
               <p className='text-[14px] font-medium tracking-wider font-circular  '>France</p>
             </div>
-          </div>
+          </motion.div>
 
 
 
           <div className='grid col-span-2 grid-rows-2  gap-[20px] h-full '>
             <div className=' w-full h-full grid grid-cols-2 gap-[20px]  rounded-lg'>
-              <div 
+              <motion.div 
+                          initial={{y:-100,opacity:0}}
+                          whileInView={{y:0,opacity:1}}
+                          viewport={{once:true,amount:0.3}}
+                          transition={{duration:1.4,type:'spring'}}
               style={{backgroundImage:`url('./m2.png')`}}
               className='flex  relative w-full h-full bg-slate-400 rounded-lg bg-cover bg-center bg-no-repeat items-end justify-center pb-[70px] ' >
 {/* 2 */}
@@ -66,8 +76,12 @@ export default function Home() {
             <p>Vík í Mýrda</p>
             <p className='text-[14px] font-medium tracking-wider font-circular  '>Iceland</p>
         </div>
-              </div>
-              <div 
+              </motion.div>
+              <motion.div 
+                initial={{y:100,opacity:0}}
+                whileInView={{y:0,opacity:1}}
+                viewport={{once:true,amount:0.3}}
+                transition={{duration:1.8,type:'spring'}}
               style={{backgroundImage:`url('./m3.png')`}}
 
               className='flex relative  w-full h-full bg-slate-700 rounded-lg bg-cover bg-center bg-no-repeat items-end' >
@@ -79,11 +93,15 @@ export default function Home() {
             <p>Hamnoy village</p>
             <p className='text-[14px] font-medium tracking-wider font-circular  '>Norway.</p>
         </div>
-              </div>
+              </motion.div>
 
 
             </div>
-            <div 
+            <motion.div 
+                initial={{x:100,opacity:0}}
+                whileInView={{x:0,opacity:1}}
+                viewport={{once:true,amount:0.3}}
+                transition={{duration:2,type:'spring'}}
               style={{backgroundImage:`url('./m4.png')`}}
 
             className='flex relative w-full h-full bg-slate-500 rounded-lg bg-cover bg-center bg-no-repeat items-end ' >
@@ -95,7 +113,7 @@ export default function Home() {
             <p>Montego Bay</p>
             <p className='text-[14px] font-medium tracking-wider font-circular  '>JAMAICA</p>
         </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </Section>
