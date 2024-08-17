@@ -16,56 +16,41 @@ const Carousel:React.FC = () => {
       autoplay: true,
       autoplaySpeed: 1000,
     }
-
+    let bg='bg2'
   return (
     <Slider {...settings}
-    className='flex flex-row  relative min-[1200px]:-mb-10 -mb-60 w-screen max-[1200px]:h-[600px] min-[1200px]:h-fit'>
-        {/* {Array(3).fill(0).map((_,idx:number)=>( */}
-        <div
-                  key={1}
-                  // style={{backgroundImage:`url('./m3.png')`}}
-                  className={`flex relative  min-[1200px]:pt-[200px] bg-[url(/bg1.png)] items-end justify-start min-[1200px]:pl-[90px] pl-[50px] w-full hover:cursor-grab min-[1200px]:h-[800px] max-[1200px]:h-[400px] bg-cover bg-center  `}
-                  >
-                      {/* text  */}
-                      <div className='absolute inset-0  z-10 bg-gradient-to-tr opacity-45 from-black to-transparent '></div>
-                      <div className='flex w-fit flex-col justify-between  z-20'>
-                          <p className='min-[1200px]:text-[250px] min-[800px]:text-[200px] shadow-md leading-[200px] font-allison font-normal text-[#FFC700]'>make the right </p>
-                          <p className='text-white min-[1200px]:text-[300px] font-extrabold shadow-md font-circular leading-[180px] text-[250px]'>move .</p>
-                      </div>
-          
-                  </div>
+    className='flex flex-row  max-[400px]:h-[400px] z-50 relative min-[1200px]:-mb-10 -mb-60 max-[400px]:-mb-10
+    w-screen max-[1200px]:h-[600px] min-[1200px]:h-fit'>
 
-                  <div
-                  key={2}
-                  // style={{backgroundImage:`url('./m3.png')`}}
-                  className={`flex relative  min-[1200px]:pt-[200px] bg-[url(/bg2.png)] items-end justify-start min-[1200px]:pl-[90px] pl-[50px] w-full hover:cursor-grab min-[1200px]:h-[800px] max-[1200px]:h-[400px] bg-cover bg-center  `}
-                  >
-                      {/* text  */}
-                      <div className='absolute inset-0  z-10 bg-gradient-to-tr opacity-45 from-black to-transparent '></div>
-                      <div className='flex w-fit flex-col justify-between z-20 '>
-                          <p className='min-[1200px]:text-[250px] min-[800px]:text-[200px] shadow-md leading-[200px] font-allison font-normal text-[#FFC700]'>make the right </p>
-                          <p className='text-white min-[1200px]:text-[300px] font-extrabold shadow-md font-circular leading-[180px] text-[250px]'>move .</p>
+      {images.map((item:string,idx:number)=>(
+            <div
+                      key={idx}
+                      // style={{backgroundImage:`url('./m3.png')`}}
+                      className={`flex flex-row items-end relative  min-[1200px]:pt-[200px] bg-[url(/bg1.png)]   justify-start
+                       min-[1200px]:pl-[90px] max-[400px]:pl-[20px] pl-[50px]
+                        w-full hover:cursor-grab min-[1200px]:h-[800px] max-[1200px]:h-[400px]  bg-cover bg-center  `}
+                      >
+                          {/* text  */}
+                          <div className='absolute inset-0  z-10 bg-gradient-to-tr opacity-45 from-black to-transparent '></div>
+                          <div className='absolute top-1/2 left-5 w-fit flex-col  justify-between  z-20'>
+                              <p className=' max-[700px]:text-[50px] max-[700px]:leading-[50px]
+                               min-[1200px]:text-[250px] min-[800px]:text-[200px] 
+                               leading-[200px] font-allison font-normal text-[#FFC700]'>make the right </p>
+                              <p className='text-white min-[1200px]:text-[300px] 
+                              max-[700px]:text-[50px] max-[700px]:leading-[50px]
+                              font-extrabold  font-circular leading-[180px] text-[250px]'>move .</p>
+                          </div>
+              
                       </div>
-          
-                  </div>
 
-                  <div
-                  key={3}
-                  // style={{backgroundImage:`url('./m3.png')`}}
-                  className={`flex relative  min-[1200px]:pt-[200px] bg-[url(/bg3.png)] items-end justify-start min-[1200px]:pl-[90px] pl-[50px] w-full hover:cursor-grab min-[1200px]:h-[800px] max-[1200px]:h-[400px] bg-cover bg-center  `}
-                  >
-                      {/* text  */}
-                      <div className='absolute inset-0  z-10 bg-gradient-to-tr opacity-45 from-black to-transparent '></div>
-                      <div className='flex w-fit flex-col justify-between  z-20 '>
-                          <p className='min-[1200px]:text-[250px] min-[800px]:text-[200px] shadow-md leading-[200px] font-allison font-normal text-[#FFC700]'>make the right </p>
-                          <p className='text-white min-[1200px]:text-[300px] font-extrabold shadow-md font-circular leading-[180px] text-[250px]'>move .</p>
-                      </div>
-          
-                  </div>
+      ))}
+
+
                   
 
     </Slider>
   )
 }
 export default Carousel
+const images=['bg1.png','bg2.png','bg3.png']
 
