@@ -13,7 +13,7 @@ export const Section =({children,className,title,text}:SectionProps) => {
     <div className={twMerge('flex w-screen   h-fit flex-col items-center justify-start  pt-[150px] ',className?className:'')}>
         {/* header  */}
         <div className='flex relative flex-col items-center justify-center  gap-[12px]
-        w-fit self-center justify-self-center text-center  text-[80px] font-circular font-extrabold text-black '>
+        w-fit self-center justify-self-center text-center tracking-tight text-[80px] font-circular font-extrabold text-black '>
             {title[1]}
             {/* top */}
             <p className='absolute -top-20 right-1/3  flex text-[200px]  tracking-tight leading-[0.2] font-allison   font-light  text-black'>{title[0]}</p>
