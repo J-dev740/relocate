@@ -16,7 +16,6 @@ const Carousel:React.FC = () => {
       autoplay: true,
       autoplaySpeed: 1000,
     }
-    let bg='bg2'
   return (
     <Slider {...settings}
     className='flex flex-row  max-[400px]:h-[400px] z-20 relative min-[1200px]:-mb-10 -mb-60 max-[400px]:-mb-10
@@ -26,7 +25,7 @@ const Carousel:React.FC = () => {
             <div
                       key={idx}
                       // style={{backgroundImage:`url('./m3.png')`}}
-                      className={`flex flex-row items-end relative  min-[1200px]:pt-[200px] bg-[url(/bg1.png)]   justify-start
+                      className={`flex flex-row items-end relative  min-[1200px]:pt-[200px] ${item}   justify-start
                        min-[1200px]:pl-[90px] max-[400px]:pl-[20px] pl-[50px]
                         w-full hover:cursor-grab min-[1200px]:h-[800px] max-[1200px]:h-[400px]  bg-cover bg-center  `}
                       >
@@ -52,5 +51,5 @@ const Carousel:React.FC = () => {
   )
 }
 export default Carousel
-const images=['bg1.png','bg2.png','bg3.png']
+const images=['bg-[url(/bg1.png)]','bg-[url(/bg2.png)]','bg-[url(/bg3.png)]']
 
