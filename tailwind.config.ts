@@ -16,9 +16,15 @@ const config: Config = {
       fontFamily:{
         allison:['Allison','cursive'],
         circular: ['CircularStd', 'sans-serif'],
+      },
+      textShadow: {
+        'sm': '0 1px 2px rgba(0, 0, 0, 0.05)',
+        'default': '0 2px 4px rgba(0, 0, 0, 0.10)',
+        'lg': '0 8px 16px rgba(0, 0, 0, 0.25)',
       }
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 };
 export default config;

@@ -3,13 +3,15 @@ import Image from "next/image";
 import { Section } from './components/Section';
 import { DestinationCard } from './components/DestinationCard';
 import { Footer } from './components/Footer';
+import { Navbar } from './components/Navbar';
 
 export default function Home() {
   return (
     <main className=" flex flex-col items-start justify-start gap-y-10 w-screen h-fit bg-white  ">
       {/* nav bar part  */}
+      {/* <Navbar/> */}
       {/* carousel part  */}
-      {/* <Carousel/> */}
+      <Carousel/>
       {/* top destinations */}
       <Section 
       topcolor='text-[#FFD600]'
