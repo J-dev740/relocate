@@ -1,5 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-### Note:Responsive up to 1000 pixel screen width
+### Note:Responsive up to 2400 pixel screen width
 
 
 ## Getting Started
